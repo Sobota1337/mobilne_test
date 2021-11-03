@@ -27,11 +27,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         add.setOnClickListener() {
-            output.text = output.text.toString() + input.text.toString();
+            (output.text.toString() + input.text.toString()).also { output.text = it };
         }
 
         suma.setOnClickListener() {
-            output.text = (x1.text.toString().toDouble() + x2.text.toString().toDouble()).toString();
+            (x1.text.toString().toDouble() + x2.text.toString().toDouble()).toString()
+                .also { output.text = it };
         }
     }
 
